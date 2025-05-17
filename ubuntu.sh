@@ -76,7 +76,7 @@ if [ ! -f "llama.cpp/build/bin/llama-cli" ]; then
     fi
     mkdir build
     cd build
-    cmake -DLLAMA_METAL=OFF ..
+    cmake -DLLAMA_METAL=OFF -DGGML_CUDA=ON ..
     cmake --build . --config Release
     cd ../..
 else
